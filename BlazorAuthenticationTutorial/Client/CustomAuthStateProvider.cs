@@ -8,17 +8,21 @@ namespace BlazorAuthenticationTutorial.Client
     public class CustomAuthStateProvider : AuthenticationStateProvider
     {
         public readonly ILocalStorageService _localStorageService;
-        public CustomAuthStateProvider(ILocalStorageService localStorageService)
+        public readonly HttpClient _httpClient;
+        public CustomAuthStateProvider(ILocalStorageService localStorageService,HttpClient httpClient)
         {
             _localStorageService=localStorageService;
+            _httpClient = httpClient;
         }
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             string token = await _localStorageService.GetItemAsStringAsync("token");
             var identity = new ClaimsIdentity();
-            if(!string.IsNullOrEmpty(token))
+            _httpClient.DefaultRequestHeaders.Authorization = null;
+            if (!string.IsNullOrEmpty(token))
             {
                 identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.Replace("\''",""));
             }
             var user=new ClaimsPrincipal(identity);
             var state = new AuthenticationState(user);
