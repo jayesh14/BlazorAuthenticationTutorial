@@ -1,0 +1,39 @@
+﻿@page "/login"
+@using BlazorAuthenticationTutorial.Shared;
+@inject HttpClient http
+@inject AuthenticationStateProvider authStateProvider
+@inject ILocalStorageService localStorage
+
+<h3>Login</h3>
+<AuthorizeView>
+    <Authorized>
+        <span>Authorized</span>
+    </Authorized>
+    <NotAuthorized>
+       
+    </NotAuthorized>
+
+</AuthorizeView>
+
+<EditForm Model="userLoginDto" OnSubmit="HandleLogin">
+    <label for="username"> Name</label>
+    <InputText id="username" @bind-Value="userLoginDto.UserName"></InputText>
+
+    <label for="password"> Password</label>
+    <InputText id="password" @bind-Value="userLoginDto.Password" type="password"></InputText>
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+
+@code {
+    UserLoginDto userLoginDto = new UserLoginDto();
+
+    async Task HandleLogin()
+    {
+        var result = await http.PostAsJsonAsync("api/auth", userLoginDto);
+        var token = await result.Content.ReadAsStringAsync();
+        Console.WriteLine(token);
+        await localStorage.SetItemAsync("token", token);
+        await authStateProvider.GetAuthenticationStateAsync();
+    }
+}
