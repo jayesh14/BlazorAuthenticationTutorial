@@ -22,7 +22,7 @@ namespace BlazorAuthenticationTutorial.Client
             if (!string.IsNullOrEmpty(token))
             {
                 identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.Replace("\''",""));
+               _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.Replace("\"", ""));
             }
             var user=new ClaimsPrincipal(identity);
             var state = new AuthenticationState(user);

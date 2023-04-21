@@ -1,12 +1,25 @@
 ﻿@page "/fetchdata"
 @using BlazorAuthenticationTutorial.Shared
+@using System.Net.Http.Headers;
 @inject HttpClient Http
+@inject ILocalStorageService localStorage
+@inject AuthenticationStateProvider authStateProvider
 
 <PageTitle>Weather forecast</PageTitle>
 
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
+
+
+<AuthorizeView>
+    <Authorized>
+        <span>This is  authorize view @context.User.Identity.Name</span>
+    </Authorized>
+    <NotAuthorized>
+        <span>This is not authorize view</span>
+    </NotAuthorized>
+</AuthorizeView>
 
 @if (forecasts == null)
 {
@@ -42,6 +55,16 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+
+        var user = authState.User;
+
+        if (user.Identity is not null && user.Identity.IsAuthenticated)
+        {
+            var token = await localStorage.GetItemAsStringAsync("token");
+            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("api/WeatherForecast");
+        }
+      
     }
 }

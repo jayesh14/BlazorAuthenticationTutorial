@@ -32,8 +32,9 @@
     {
         var result = await http.PostAsJsonAsync("api/auth", userLoginDto);
         var token = await result.Content.ReadAsStringAsync();
-        Console.WriteLine(token);
         await localStorage.SetItemAsync("token", token);
+        
         await authStateProvider.GetAuthenticationStateAsync();
+        
     }
 }

@@ -1,11 +1,32 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Authentication.JwtBearer; // NOTE: THIS LINE OF CODE IS NEWLY ADDED
+using Microsoft.IdentityModel.Tokens; // NOTE: THIS LINE OF CODE IS NEWLY ADDED
+using BlazorAuthenticationTutorial.Server;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// NOTE: the following block of code is newly added
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MyScretKey34343sfs3434sdValue"))
+    };
+});
+// NOTE: end block
+
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+
+//builder.Services.AddScoped<IJwtUtils, JwtUtils>();
 
 var app = builder.Build();
 
@@ -25,9 +46,16 @@ app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
-
+app.UseAuthentication(); // NOTE: line is newly added
 app.UseRouting();
 
+// global cors policy
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+app.UseAuthorization(); // NOTE: line is newly addded, notice placement after UseRouting()
 
 app.MapRazorPages();
 app.MapControllers();

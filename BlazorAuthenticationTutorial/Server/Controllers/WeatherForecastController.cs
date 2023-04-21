@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlazorAuthenticationTutorial.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    //[Authorize]
+    [Route("api/[controller]")]
+
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -15,13 +15,14 @@ namespace BlazorAuthenticationTutorial.Server.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
+       
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
+       [Authorize]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
