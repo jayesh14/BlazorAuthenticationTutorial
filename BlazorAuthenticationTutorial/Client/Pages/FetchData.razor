@@ -15,11 +15,7 @@
 <AuthorizeView>
     <Authorized>
         <span>This is  authorize view @context.User.Identity.Name</span>
-    </Authorized>
-    <NotAuthorized>
-        <span>This is not authorize view</span>
-    </NotAuthorized>
-</AuthorizeView>
+    <br />
 
 @if (forecasts == null)
 {
@@ -50,6 +46,11 @@ else
     </table>
 }
 
+    </Authorized>
+    <NotAuthorized>
+        <span>This is not authorize view</span>
+    </NotAuthorized>
+</AuthorizeView>
 @code {
     private WeatherForecast[]? forecasts;
 
@@ -65,6 +66,5 @@ else
             var token = await localStorage.GetItemAsStringAsync("token");
             forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("api/WeatherForecast");
         }
-      
     }
 }
