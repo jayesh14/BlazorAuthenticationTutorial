@@ -14,6 +14,8 @@ namespace BlazorAuthenticationTutorial.Server.Controllers
     public class AuthController : ControllerBase
     {
         
+
+
         [HttpPost]
         public async Task<string> Login(UserLoginDto userLoginDto)
         {
