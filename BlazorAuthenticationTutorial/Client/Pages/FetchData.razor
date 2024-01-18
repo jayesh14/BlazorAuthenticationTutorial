@@ -1,9 +1,11 @@
 ﻿@page "/fetchdata"
 @using BlazorAuthenticationTutorial.Shared
 @using System.Net.Http.Headers;
+@using System.Security.Claims
 @inject HttpClient Http
 @inject ILocalStorageService localStorage
 @inject AuthenticationStateProvider authStateProvider
+
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -12,39 +14,40 @@
 <p>This component demonstrates fetching data from the server.</p>
 
 
-<AuthorizeView>
+<AuthorizeView Roles="Admin">
     <Authorized>
-        <span>This is  authorize view @context.User.Identity.Name</span>
-    <br />
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+        <span>This is  authorize view @context.User.Identity.Name  </span>
+        <br />
+
+        @if (forecasts == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temp. (C)</th>
+                        <th>Temp. (F)</th>
+                        <th>Summary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var forecast in forecasts)
+                    {
+                        <tr>
+                            <td>@forecast.Date.ToShortDateString()</td>
+                            <td>@forecast.TemperatureC</td>
+                            <td>@forecast.TemperatureF</td>
+                            <td>@forecast.Summary</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
 
     </Authorized>
     <NotAuthorized>
@@ -56,13 +59,20 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-
+        List<string> roles = new List<string>();
         var authState = await authStateProvider.GetAuthenticationStateAsync();
 
         var user = authState.User;
 
         if (user.Identity is not null && user.Identity.IsAuthenticated)
         {
+
+            // Get roles from claims
+            roles = user.Claims
+                .Where(c => c.Type == ClaimTypes.Role)
+                .Select(c => c.Value)
+                .ToList();
+
             var token = await localStorage.GetItemAsStringAsync("token");
             forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("api/WeatherForecast");
         }

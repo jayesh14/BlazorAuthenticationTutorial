@@ -2,8 +2,19 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Hello</h1>
+<p style="font-family:'Cambria Math';font-size:18px;">
+    <h3>Balzor</h3>
+    <br /><br />
+    Our project implements a secure login and logout system using JWT (JSON Web Token) authentication. When a user logs in, a JWT token is generated on the API server and sent back to the client. The client-side application then saves this token securely in the browser's localStorage.
+    <br /><br />
+    We have implemented an authentication page that utilizes an authorized view. This means that certain pages or components can only be accessed by authenticated users. Unauthorized users will be redirected to the login page.
+    <br /><br />
+    To ensure the security of our API endpoints, we have implemented JWT token authentication. Each request made to our API must include the JWT token in the Authorization header. This ensures that only authenticated users with a valid token can access the protected API routes.
+    <br /><br />
+    Additionally, our project supports CRUD (Create, Read, Update, Delete) operations. Users with the appropriate permissions can perform these operations on specific resources through the API endpoints. Each request made to the API must be accompanied by the JWT token to authenticate and authorize the user's actions.
+    <br /><br />
+    By implementing this login and logout system with JWT authentication, securely storing the token in the browser's localStorage, enforcing authentication for authorized views, and securing our API with JWT token-based authentication, we ensure a robust and secure user experience while allowing authorized users to perform CRUD operations through our API endpoints.
+</p>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />

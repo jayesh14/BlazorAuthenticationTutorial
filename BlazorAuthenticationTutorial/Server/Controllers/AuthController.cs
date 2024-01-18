@@ -29,7 +29,7 @@ namespace BlazorAuthenticationTutorial.Server.Controllers
             List<Claim> claims = new List<Claim> {
                 new Claim(ClaimTypes.Name, userLoginDto.UserName),
                 new Claim(ClaimTypes.Role, "Admin"),
-                new Claim(ClaimTypes.Role, "User"),
+                //new Claim(ClaimTypes.Role, "User"),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MyScretKey34343sfs3434sdValue"));
