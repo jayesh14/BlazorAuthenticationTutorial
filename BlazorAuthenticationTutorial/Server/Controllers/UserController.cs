@@ -12,10 +12,12 @@ namespace BlazorAuthenticationTutorial.Server.Controllers
     public class UserController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly ILogger _logger;
 
-        public UserController(DataContext context)
+        public UserController(DataContext context, ILogger<UserController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -23,6 +25,7 @@ namespace BlazorAuthenticationTutorial.Server.Controllers
         {
             try
             {
+                _logger.LogInformation("Here Logo Message : UserContorller");
                 var systemUsers = await _context.SystemUsers.ToListAsync();
                 return Ok(systemUsers);
             }catch (Exception ex)

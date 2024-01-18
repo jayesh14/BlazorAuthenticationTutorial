@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens; // NOTE: THIS LINE OF CODE IS NEWLY ADDED
 using BlazorAuthenticationTutorial.Server;
 using System.Text;
 using BlazorAuthenticationTutorial.Server.Data;
+using BlazorAuthenticationTutorial.Server.Log;
 
 
 
@@ -25,6 +26,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 // NOTE: end block
+
+builder.Logging.AddFileLogger("Log/mylog.txt");
+
 
 
 builder.Services.AddControllersWithViews();

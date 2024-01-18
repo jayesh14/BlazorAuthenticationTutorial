@@ -1,0 +1,10 @@
+2024-01-18 12:48:41 [Information] Now listening on: https://localhost:7031
+2024-01-18 12:48:41 [Information] Now listening on: http://localhost:5043
+2024-01-18 12:48:41 [Information] Application started. Press Ctrl+C to shut down.
+2024-01-18 12:48:41 [Information] Hosting environment: Development
+2024-01-18 12:48:41 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-01-18 12:48:57 [Information] Here Logo Message : UserContorller
+2024-01-18 12:48:58 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-01-18 12:48:59 [Information] Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
