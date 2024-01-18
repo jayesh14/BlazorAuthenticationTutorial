@@ -63,7 +63,7 @@
         var authState = await authStateProvider.GetAuthenticationStateAsync();
 
         var user = authState.User;
-
+        var isAdminRole = user.IsInRole("Admin");
         if (user.Identity is not null && user.Identity.IsAuthenticated)
         {
 
