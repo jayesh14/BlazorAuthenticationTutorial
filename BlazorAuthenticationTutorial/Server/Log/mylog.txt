@@ -8,3 +8,133 @@
 2024-01-18 12:48:59 [Information] Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
 FROM [SystemUsers] AS [s]
+2024-12-09 13.57.11 [Information] Now listening on: https://localhost:7031
+2024-12-09 13.57.11 [Information] Now listening on: http://localhost:5043
+2024-12-09 13.57.11 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-09 13.57.11 [Information] Hosting environment: Development
+2024-12-09 13.57.11 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-09 13.58.41 [Information] Here Logo Message : UserContorller
+2024-12-09 13.58.41 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 13.58.42 [Information] Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 13.58.45 [Information] Here Logo Message : UserContorller
+2024-12-09 13.58.45 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 13.58.45 [Information] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 13.58.49 [Information] Here Logo Message : UserContorller
+2024-12-09 13.58.49 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 13.58.49 [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 13.59.33 [Information] Now listening on: https://localhost:7031
+2024-12-09 13.59.33 [Information] Now listening on: http://localhost:5043
+2024-12-09 13.59.33 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-09 13.59.33 [Information] Hosting environment: Development
+2024-12-09 13.59.33 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-09 14.06.28 [Information] Now listening on: https://localhost:7031
+2024-12-09 14.06.28 [Information] Now listening on: http://localhost:5043
+2024-12-09 14.06.28 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-09 14.06.28 [Information] Hosting environment: Development
+2024-12-09 14.06.28 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-09 14.30.19 [Information] Here Logo Message : UserContorller
+2024-12-09 14.30.20 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 14.30.21 [Information] Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 14.42.38 [Information] Here Logo Message : UserContorller
+2024-12-09 14.42.38 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 14.42.38 [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 14.42.42 [Information] Here Logo Message : UserContorller
+2024-12-09 14.42.42 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 14.42.42 [Information] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 14.42.43 [Information] Here Logo Message : UserContorller
+2024-12-09 14.42.43 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 14.42.43 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-09 14.42.44 [Information] Here Logo Message : UserContorller
+2024-12-09 14.42.44 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-09 14.42.44 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-10 16.06.00 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.06.00 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.06.00 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.06.00 [Information] Hosting environment: Development
+2024-12-10 16.06.00 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.06.37 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.06.37 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.06.37 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.06.37 [Information] Hosting environment: Development
+2024-12-10 16.06.37 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.07.35 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.07.35 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.07.35 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.07.35 [Information] Hosting environment: Development
+2024-12-10 16.07.35 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.15.47 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.15.47 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.15.47 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.15.47 [Information] Hosting environment: Development
+2024-12-10 16.15.47 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.17.07 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.17.07 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.17.07 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.17.07 [Information] Hosting environment: Development
+2024-12-10 16.17.07 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.22.14 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.22.14 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.22.14 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.22.14 [Information] Hosting environment: Development
+2024-12-10 16.22.14 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.23.30 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.23.30 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.23.30 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.23.30 [Information] Hosting environment: Development
+2024-12-10 16.23.30 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.25.50 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.25.50 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.25.50 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.25.50 [Information] Hosting environment: Development
+2024-12-10 16.25.50 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.27.51 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.27.51 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.27.51 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.27.51 [Information] Hosting environment: Development
+2024-12-10 16.27.51 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.36.03 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.36.03 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.36.03 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.36.03 [Information] Hosting environment: Development
+2024-12-10 16.36.03 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.40.10 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.40.10 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.40.10 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.40.10 [Information] Hosting environment: Development
+2024-12-10 16.40.10 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 16.40.43 [Information] Now listening on: https://localhost:7031
+2024-12-10 16.40.43 [Information] Now listening on: http://localhost:5043
+2024-12-10 16.40.43 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 16.40.43 [Information] Hosting environment: Development
+2024-12-10 16.40.43 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 17.51.24 [Information] Now listening on: https://localhost:7031
+2024-12-10 17.51.24 [Information] Now listening on: http://localhost:5043
+2024-12-10 17.51.24 [Information] Application started. Press Ctrl+C to shut down.
+2024-12-10 17.51.24 [Information] Hosting environment: Development
+2024-12-10 17.51.24 [Information] Content root path: E:\learning\BlazorAuthenticationTutorial\BlazorAuthenticationTutorial\Server\
+2024-12-10 17.51.54 [Information] Here Logo Message : UserContorller
+2024-12-10 17.51.55 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-10 17.51.56 [Information] Executed DbCommand (81ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]
+2024-12-10 17.51.56 [Information] Here Logo Message : UserContorller
+2024-12-10 17.51.56 [Information] Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: None
+2024-12-10 17.51.56 [Information] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[Name], [s].[PasswordHash], [s].[Username]
+FROM [SystemUsers] AS [s]

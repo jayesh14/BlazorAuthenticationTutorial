@@ -1,36 +1,40 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider authStateProvider
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <AuthorizeView>
+        <Authorized>
+            <div class="sidebar">
+                <NavMenu />
+            </div>
+        </Authorized>
+    </AuthorizeView>
 
     <main>
-        <div class="top-row px-4">
-           <LoginLogoutButton></LoginLogoutButton>
-        </div>
+        <AuthorizeView>
+            <Authorized>
+                <div class="top-row px-4">
+                    <LoginLogoutButton />
+                </div>
+            </Authorized>
+        </AuthorizeView>
 
         <article class="content px-4">
-            <ErrorBoundary @ref="errorBoundary">
-                <ChildContent>
-                     @Body
-                </ChildContent>
-                <ErrorContent Context="Exception">
-                    <div class="alert alert-danger">
-                        @Exception.GetType() <br />
-                        @Exception.Message <br />
-                        @Exception.InnerException?.Message
-                    </div>
-                </ErrorContent>
-            </ErrorBoundary>
+            @Body
         </article>
     </main>
 </div>
 
 @code {
-    private ErrorBoundary? errorBoundary;
-    protected override void OnParametersSet()
+    protected override async Task OnInitializedAsync()
     {
-        errorBoundary?.Recover();
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity == null || !user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo("/login"); 
+        }
     }
 }
