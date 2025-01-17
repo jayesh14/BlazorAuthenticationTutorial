@@ -1,1 +1,1 @@
-I have 10+ year of experience building windows and web applications(Asp.net Core,  blazor, MVC, Angular , VueJs, jQuery, Html, CSS ); web/cloud applications; horizontally scalable back-ends; Microsoft SQL Server DBs; distributed RESTful API services; and web-based front-ends with modern, highly interactive responsive UIs. ![image](https://github.com/user-attachments/assets/0fc7e955-57b1-4280-9d80-c812c82f084f)
+
